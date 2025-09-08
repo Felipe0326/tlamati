@@ -30,9 +30,18 @@
         </button>
 
         <ul class="user__menu" role="menu">
-          <li role="menuitem"><a href="#">Cambiar correo</a></li>
-          <li role="menuitem"><a href="#">Cambiar contraseña</a></li>
-          <li role="menuitem"><a href="#">Cerrar sesión</a></li>
+          <li role="menuitem"><a href="#">Sistema de Registro de Obras</a></li>
+          <li role="menuitem"><a href="#">TPBV</a></li>
+          <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMWYxZD
+            I5NGMtNGMyMy00MTc2LWI1ZmQtZjk1NmZjZWM1OGU3IiwidCI6ImJkYmMyMGExLTg4ZGQtND
+            liZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Caravanas del Pueblo</a></li>
+          <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMTgyMj
+            VjYTYtMmY2Ni00MTBmLWI5ZjMtNzczNWYwOWE4ZDA1IiwidCI6ImJkYmMyMGExLTg4ZGQtND
+            liZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Corazón de Mujer</a></li>
+          <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NT
+            c3ZGYtZGVlNy00ZWI1LTlkY2QtODgwODAyNGEzZTUxIiwidCI6ImJkYmMyMGExLTg4ZGQtND
+            liZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Educación</a></li>
+          <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMjI2MWI3OGItZTgzOS00OGJkLTljNjktMTc1ZWZlMWZkYTFkIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Sociodemográfico</a></li>
         </ul>
       </div>
     </div>
@@ -43,7 +52,7 @@
     <div class="wrap hero__in">
       <div class="hero__copy">
         <p class="kicker">Agencia de Transformación Digital</p>
-        <h1>Centro de<br />Inteligencia</h1>
+        <h1>Tlamati<br />Morelos</h1>
       </div>
 
       <!-- Solo contenedor + img (tu ilustración) -->
@@ -57,7 +66,7 @@
 <main class="wrap grid cards">
   <!-- 1 -->
   <article class="card card--primary">
-    <h3 class="card__title">Sistema de Registro de Obras (RDO) 
+    <h3 class="card__title">Sistema de Registro de Obras
 </h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
     <p class="card__desc">
@@ -236,6 +245,18 @@
     });
 
     document.addEventListener('click', () => menu.classList.remove('open'));
+
+
+  // 🔹 Nuevo: marcar ítem activo
+  const menuLinks = document.querySelectorAll('.user__menu a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // quitar la clase activa de todos
+      menuLinks.forEach(l => l.classList.remove('active'));
+      // marcar solo el clicado
+      e.target.classList.add('active');
+    });
+  });
   </script>
 </body>
 </html>

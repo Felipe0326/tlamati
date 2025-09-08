@@ -78,10 +78,24 @@ body{
   background:#fff;
 }
 .user__menu a:hover{background:#F2EFE6}
-.user__menu li:last-child a{
-  background:#E9DFC9; border-radius:16px; font-weight:800; text-align:center;
+/* Quitar estilo fijo al último elemento */
+.user__menu li:last-child a {
+  background:#fff;        /* igual que los demás */
+  border-radius:12px;
+  font-weight:600;
+  text-align:left;
 }
-.user__menu li:last-child a:hover{filter:brightness(.97)}
+.user__menu li:last-child a:hover {
+  background:#F2EFE6;     /* mismo hover que el resto */
+  filter:none;
+}
+/* Estado activo del menú */
+.user__menu a.active {
+  background: #E9DFC9;   /* color resaltado */
+  border-radius: 12px;
+  font-weight: 800;
+  text-align: left;
+}
 
 
 .hero{
