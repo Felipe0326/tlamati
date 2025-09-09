@@ -1,3 +1,17 @@
+
+@font-face {
+  font-family: 'Quetzalli Sans';
+  src: url('fonts/Quetzalli Sans/QuetzalliSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quetzalli Sans';
+  src: url('fonts/Quetzalli Sans/QuetzalliSans-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
 :root{
   --page:#F4F5F1;
   --green:#2A3B29;      
@@ -19,9 +33,9 @@ body{
   margin:0;
   background:var(--page);
   color:var(--ink);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Quetzalli Sans', sans-serif;
+  font-weight: 400; 
 }
-
 
 .wrap{max-width:1200px; margin-inline:auto; padding-inline:28px}
 
@@ -33,7 +47,6 @@ body{
   /* top:0; */
   /* z-index:50; */
 }
-
 
 .topbar__in{
   display:grid;
@@ -48,7 +61,8 @@ body{
   display:flex; justify-content:center; gap:56px;
 }
 .mainnav a{
-  color:#73785E;  text-decoration:none; font-weight:700;
+  color:#73785E;  text-decoration:none;
+  font-weight:400;               
   font-size:20px; letter-spacing:.2px;
 }
 .mainnav a:hover{color:#273D35}
@@ -58,7 +72,8 @@ body{
   display:flex; align-items:center; gap:10px;
   background:#1F352D; color:#fff;
   border:0; padding:10px 16px; border-radius:999px;
-  cursor:pointer; font-weight:800; font-size:14px;
+  cursor:pointer; font-weight:400; 
+  font-size:14px;
   box-shadow:0 6px 14px rgba(0,0,0,.12);
 }
 .user__btn .chev{width:18px; height:18px; color:#fff}
@@ -68,33 +83,34 @@ body{
   background:#fff; border:0; border-radius:18px;
   box-shadow:0 20px 40px rgba(0,0,0,.2);
   width:220px; display:none;
-   z-index: 9999;
+  z-index: 9999;
 }
 .user__menu.open{display:block}
 .user__menu li{margin:4px 0}
 .user__menu a{
   display:block; padding:12px 14px; text-decoration:none;
-  color:#20352D; border-radius:12px; font-weight:600;
+  color:#20352D; border-radius:12px; 
   background:#fff;
+  font-weight:400;
 }
 .user__menu a:hover{background:#F2EFE6}
-/* Quitar estilo fijo al último elemento */
+
 .user__menu li:last-child a {
-  background:#fff;        /* igual que los demás */
+  background:#fff;        
   border-radius:12px;
-  font-weight:600;
+  font-weight:400;       
   text-align:left;
 }
 .user__menu li:last-child a:hover {
-  background:#F2EFE6;     /* mismo hover que el resto */
+  background:#F2EFE6;     
   filter:none;
 }
-/* Estado activo del menú */
+
 .user__menu a.active {
-  background: #E9DFC9;   /* color resaltado */
-  border-radius: 12px;
-  font-weight: 800;
-  text-align: left;
+  background:#E9DFC9;   
+  border-radius:12px;
+  font-weight:400;      
+  text-align:left;
 }
 
 
@@ -118,14 +134,14 @@ body{
   margin:0 0 6px;
   opacity:.95;
   font-size:18px;
-  font-weight:600;
+  font-weight:400;  
 }
 .hero h1{
   margin:0;
   font-size: clamp(40px, 6vw, 80px);
   line-height:1.05;
   letter-spacing:-1px;
-  font-weight:900;
+  font-weight:400; 
 }
 .hero__art{
   display:flex;
@@ -166,11 +182,12 @@ body{
   box-shadow: 0 10px 22px rgba(0,0,0,.12);
   transform: translateY(-1px);
 }
+
 .cards .card__title{
   margin: 0;
   font-size: 22px;
   line-height: 1.15;
-  font-weight: 800;
+  font-weight: 400;      
   color: #1E342C;
   text-align: center;
 }
@@ -182,13 +199,16 @@ body{
   margin-right: calc(var(--card-pad) * -1);
   object-fit: cover;
 }
+
 .cards .card__desc{
   margin: 4px 0 10px;
   color: #515852;
   line-height: 1.65;
   font-size: 20px;
+  font-weight: 100;     
   flex: 1;
 }
+
 .cards .btn{
   display:inline-flex; align-items:center; justify-content:space-between; gap:16px;
   width: 85%;
@@ -196,7 +216,7 @@ body{
   height: 44px;                      
   padding: 0 18px;
   border-radius:999px;
-  font-weight:800;
+  font-weight:400;        
   text-decoration:none;
   letter-spacing:.2px;
   box-shadow:0 3px 10px rgba(0,0,0,.06);
@@ -235,8 +255,21 @@ body{
   gap: 56px;                        
   padding: 24px 32px 10px;         
 }
-.footer h4{ margin: .25rem 0 16px; color: #F0F3EA; font-size: 14px; font-weight: normal; }
-.footer p, .footer a, .footer li{ margin: 0 0 .45rem; color: #E7EBDD; font-size: 14px; text-decoration: none; }
+
+.footer h4{ 
+  margin: .25rem 0 16px; 
+  color: #F0F3EA; 
+  font-size: 14px; 
+  font-weight: 100;        
+}
+
+.footer p, .footer a, .footer li{ 
+  margin: 0 0 .45rem; 
+  color: #E7EBDD; 
+  font-size: 14px; 
+  text-decoration: none; 
+  font-weight: 400;        
+}
 .footer a:hover{ text-decoration: underline; }
 .fbrand{ display: flex; flex-direction: column; gap: 26px; margin-left: -18px; margin-bottom: 14px; }
 .fbrand img:first-child{ max-height: 84px; }
@@ -245,8 +278,6 @@ body{
 .quick li{ margin: 0 0 .7rem; }
 .footer__band{ width: 100%; margin: 16px 0; }
 .footer__band img{ display: block; width: 100%; height: auto; object-fit: contain; }
-
-
 
 
 @media (max-width: 880px){
@@ -270,7 +301,6 @@ body{
   .brand{ order: 1; }
   .user{ order: 2; justify-self: end; }
 
-
   .mainnav{
     order: 3;
     grid-column: 1 / -1;
@@ -288,6 +318,7 @@ body{
     font-size: 16px;
     white-space: nowrap;
     padding: 6px 0;
+    font-weight: 400; 
   }
 
   .user__menu{
@@ -302,7 +333,6 @@ body{
   .user__btn{ padding:6px 10px; font-size:12px; }
 }
 
-
 @media (max-width: 960px){
   .hero__in{
     grid-template-columns: 1fr;   
@@ -315,8 +345,9 @@ body{
   .hero h1{
     font-size: 56px;     
     line-height: 1.06;
+    font-weight: 400; 
   }
-  .kicker{ font-size: 16px; }
+  .kicker{ font-size: 16px; font-weight: 400; }
 
   .hero__art{ justify-content: center; }
   .hero__art img{
@@ -334,8 +365,9 @@ body{
     font-size: 44px;
     line-height: 1.08;
     letter-spacing: -0.5px;
+    font-weight: 400; /* Regular */
   }
-  .kicker{ font-size: 15px; }
+  .kicker{ font-size: 15px; font-weight: 400; }
 
   .hero__art img{
     width: min(340px, 90vw);
@@ -344,15 +376,14 @@ body{
 }
 
 @media (max-width: 360px){
-  .hero h1{ font-size: 36px; }
-  .kicker{ font-size: 14px; }
+  .hero h1{ font-size: 36px; font-weight: 400; }
+  .kicker{ font-size: 14px; font-weight: 400; }
 
   .hero__art img{
     width: 82vw;
     margin-bottom: -44px;         
   }
 }
-
 
 @media (max-width:1100px){
   .grid.cards{grid-template-columns:repeat(2,1fr); gap:28px; margin-top:90px;}
@@ -364,7 +395,6 @@ body{
 @media (min-width:1600px){
   .grid.cards{grid-template-columns:repeat(4,1fr);}
 }
-
 
 @media (max-width: 1200px){
   .footer__in{ gap: 40px; padding: 22px 24px 8px; }
