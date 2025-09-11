@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<!--
+  Página Tlamati con cuatro bloques principales: topbar, hero, tarjetas y footer.  
+Incluye un menú interactivo para tableros, una sección visual introductoria y una grilla de tarjetas enlazando a tableros externos.  
+El diseño es responsive y la interactividad básica se maneja con JavaScript simple.
+-->
+
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,20 +13,16 @@
   <link rel="stylesheet" href="cssindex.css" />
 </head>
 <body>
-  <!-- BARRA SUPERIOR -->
+
 <header class="topbar">
   <div class="wrap topbar__in">
-    <a class="brand" href="#">
-      <img src="img/logomorelos.png" alt="Morelos" />
-    </a>
-
+    <a class="brand" href="#"><img src="img/logomorelos.png" alt="Morelos" /></a>
     <nav class="mainnav" aria-label="Principal">
       <a href="#"></a>
       <a href="#"></a>
       <a href="#"></a>
       <a href="#"></a>
     </nav>
-
     <div class="user">
       <button class="user__btn" aria-haspopup="true" aria-expanded="false">
         Tableros
@@ -28,200 +30,132 @@
           <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
       </button>
-
-     
       <ul class="user__menu" role="menu">
-        <li role="menuitem">
-          <a href="mutipanelRDO.html" target="_blank" rel="noopener noreferrer">Sistema de Registro de Obras</a>
-        </li>
+        <li role="menuitem"><a href="mutipanelRDO.html" target="_blank" rel="noopener noreferrer">Sistema de Registro de Obras</a></li>
         <li role="menuitem"><a href="#">TPBV</a></li>
-        <li role="menuitem">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMWYxZDI5NGMtNGMyMy00MTc2LWI1ZmQtZjk1NmZjZWM1OGU3IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-             target="_blank" rel="noopener noreferrer">Caravanas del Pueblo</a>
-        </li>
-        <li role="menuitem">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMTgyMjVjYTYtMmY2Ni00MTBmLWI5ZjMtNzczNWYwOWE4ZDA1IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-             target="_blank" rel="noopener noreferrer">Corazón de Mujer</a>
-        </li>
-        <li role="menuitem">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NTc3ZGYtZGVlNy00ZWI1LTlkY2QtODgwODAyNGEzZTUxIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-             target="_blank" rel="noopener noreferrer">Educación</a>
-        </li>
-        <li role="menuitem">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiMjI2MWI3OGItZTgzOS00OGJkLTljNjktMTc1ZWZlMWZkYTFkIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-             target="_blank" rel="noopener noreferrer">Sociodemográfico</a>
-        </li>
+        <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMWYxZDI5NGMtNGMyMy00MTc2LWI1ZmQtZjk1NmZjZWM1OGU3IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Caravanas del Pueblo</a></li>
+        <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMTgyMjVjYTYtMmY2Ni00MTBmLWI5ZjMtNzczNWYwOWE4ZDA1IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Corazón de Mujer</a></li>
+        <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NTc3ZGYtZGVlNy00ZWI1LTlkY2QtODgwODAyNGEzZTUxIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Educación</a></li>
+        <li role="menuitem"><a href="https://app.powerbi.com/view?r=eyJrIjoiMjI2MWI3OGItZTgzOS00OGJkLTljNjktMTc1ZWZlMWZkYTFkIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">Sociodemográfico</a></li>
       </ul>
     </div>
   </div>
 </header>
 
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero__in">
-      <div class="hero__copy">
-        <p class="kicker">Agencia de Transformación Digital</p>
-        <h1>Tlamati <br />Morelos</h1>
-      </div>
-
-      <!-- Solo contenedor + img (tu ilustración) -->
-      <div class="hero__art">
-        <img src="img/imagenlogo.png" alt="Ilustración hero" />
-      </div>
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <p class="kicker">Agencia de Transformación Digital</p>
+      <h1>Tlamati <br />Morelos</h1>
     </div>
-  </section>
+    <div class="hero__art">
+      <img src="img/imagenlogo.png" alt="Ilustración hero" />
+    </div>
+  </div>
+</section>
 
-  <!-- TARJETAS -->
 <main class="wrap grid cards">
-  <!-- 1 -->
   <article class="card card--primary">
-    <h3 class="card__title">Sistema de Registro de Obras
-</h3>
+    <h3 class="card__title">Sistema de Registro de Obras</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-     Este tablero ofrece un reporte transparente de las obras públicas en el estado de Morelos.
-
-    </p>
-
-   <a id="btn-multi" class="btn btn--filled"
-     href="mutipanelRDO.html"
-     target="_blank" rel="noopener noreferrer">
-  <span>Ver más</span>
-  <span class="round-arrow" aria-hidden="true">
-    <svg viewBox="0 0 24 24">
-      <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span>
-</a>
-
-
+    <p class="card__desc">Este tablero ofrece un reporte transparente de las obras públicas en el estado de Morelos.</p>
+    <a id="btn-multi" class="btn btn--filled" href="mutipanelRDO.html" target="_blank" rel="noopener noreferrer">
+      <span>Ver más</span>
+      <span class="round-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
   </article>
 
-  <!-- 2 -->
   <article class="card">
     <h3 class="card__title">TPBV</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-     Este tablero permite el monitoreo, reporte y seguimiento continuo del programa "Territorios de Paz y Buen Vivir" (TPBV) en zonas de alta marginación. 
-
-    </p>
-
-    <a class="btn btn--ghost" href="" 
-    target="_blank" rel="noopener noreferrer">
+    <p class="card__desc">Este tablero permite el monitoreo, reporte y seguimiento continuo del programa "Territorios de Paz y Buen Vivir" (TPBV) en zonas de alta marginación.</p>
+    <a class="btn btn--ghost" href="" target="_blank" rel="noopener noreferrer">
       <span>Ver más</span>
       <span class="round-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </article>
 
-  <!-- 3 -->
   <article class="card">
     <h3 class="card__title">Caravanas del Pueblo</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-      Proporciona un análisis en tiempo real e histórico de los servicios y atenciones brindadas en las Caravanas del Pueblo.
-
-    </p>
-
-    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMWYxZDI5NGMtNGMyMy00MTc2LWI1ZmQtZjk1NmZjZWM1OGU3IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-    target="_blank" rel="noopener noreferrer">
+    <p class="card__desc">Proporciona un análisis en tiempo real e histórico de los servicios y atenciones brindadas en las Caravanas del Pueblo.</p>
+    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMWYxZDI5NGMtNGMyMy00MTc2LWI1ZmQtZjk1NmZjZWM1OGU3IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">
       <span>Ver más</span>
       <span class="round-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </article>
 
-  <!-- 4 -->
   <article class="card">
     <h3 class="card__title">Corazón de Mujer</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-      Muestra información clave del programa, permitiendo procesar y visualizar las características de las mujeres registradas para optimizar la gestión y el impacto del programa.
-
-    </p>
-
-    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMTgyMjVjYTYtMmY2Ni00MTBmLWI5ZjMtNzczNWYwOWE4ZDA1IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9"
-    target="_blank" rel="noopener noreferrer">
+    <p class="card__desc">Muestra información clave del programa, permitiendo procesar y visualizar las características de las mujeres registradas para optimizar la gestión y el impacto del programa.</p>
+    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMTgyMjVjYTYtMmY2Ni00MTBmLWI5ZjMtNzczNWYwOWE4ZDA1IiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">
       <span>Ver más</span>
       <span class="round-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </article>
 
-  <!-- 5 -->
   <article class="card">
     <h3 class="card__title">Educación</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-      Reporte del sistema educativo, abarcando la matrícula por sexo y nivel, la situación del alumnado con discapacidad y de origen extranjero, la infraestructura y el personal docente. Facilita la planeación estratégica.
- </p>
-
-    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NTc3ZGYtZGVlNy00ZWI1LTlkY2QtODgwODAyNGEzZTUxIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" 
-    target="_blank" rel="noopener noreferrer">
+    <p class="card__desc">Reporte del sistema educativo, abarcando la matrícula por sexo y nivel, la situación del alumnado con discapacidad y de origen extranjero, la infraestructura y el personal docente. Facilita la planeación estratégica.</p>
+    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiZGU5NTc3ZGYtZGVlNy00ZWI1LTlkY2QtODgwODAyNGEzZTUxIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">
       <span>Ver más</span>
       <span class="round-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </article>
 
-  <!-- 6 -->
   <article class="card">
     <h3 class="card__title">Sociodemográfico</h3>
     <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
-    <p class="card__desc">
-      Este tablero procesa y visualiza datos del Censo de Población y Vivienda 2020 del INEGI. Proporciona información sociodemográfica detallada sobre la población.
-
-    </p>
-
-    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMjI2MWI3OGItZTgzOS00OGJkLTljNjktMTc1ZWZlMWZkYTFkIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" 
-    target="_blank" rel="noopener noreferrer">
+    <p class="card__desc">Este tablero procesa y visualiza datos del Censo de Población y Vivienda 2020 del INEGI. Proporciona información sociodemográfica detallada sobre la población.</p>
+    <a class="btn btn--ghost" href="https://app.powerbi.com/view?r=eyJrIjoiMjI2MWI3OGItZTgzOS00OGJkLTljNjktMTc1ZWZlMWZkYTFkIiwidCI6ImJkYmMyMGExLTg4ZGQtNDliZS05NTVlLWVjNjczZjdiN2UxNCIsImMiOjR9" target="_blank" rel="noopener noreferrer">
       <span>Ver más</span>
       <span class="round-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </article>
+
+  <article class="card">
+    <h3 class="card__title">Trámites Vehiculares</h3>
+    <img class="card__band" src="img/barratarjetas.png" alt="" aria-hidden="true" />
+    <p class="card__desc">Este tablero presenta información adicional relevante para el seguimiento y análisis de programas en el estado de Morelos.</p>
+    <a class="btn btn--ghost" href="movilidad-dashboard.html" target="_blank" rel="noopener noreferrer">
+      <span>Ver más</span>
+      <span class="round-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h12m0 0l-4-4m4 4l-4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </a>
   </article>
 </main>
 
- <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer__in">
     <div class="fcol fbrand">
       <img src="img/logofooter.png" alt="Morelos" />
       <img src="img/logoagencia.png" alt="Innovación Digital" class="logo-sec" />
     </div>
-
     <div class="fcol">
       <h4>Horario de Atención</h4>
       <p>8:00 - 17:00</p>
       <h4>Configuración Cookies</h4>
       <p><a href="#">Política Privacidad</a></p>
     </div>
-
     <div class="fcol">
       <h4>Ubicación</h4>
-      <p>
-        Palacio de Gobierno 2do. Piso<br />
-        Plaza de Armas S/N, Colonia Centro, Cuernavaca, Morelos.<br />
-        C.P. 62000
-      </p>
+      <p>Palacio de Gobierno 2do. Piso<br />Plaza de Armas S/N, Colonia Centro, Cuernavaca, Morelos.<br />C.P. 62000</p>
     </div>
-
     <div class="fcol">
       <h4>Contacto Rápido</h4>
       <ul class="quick">
@@ -233,47 +167,26 @@
       </ul>
     </div>
   </div>
-
-  <div class="footer__band">
-    <img src="img/groupfooter.png" alt="">
-  </div>
+  <div class="footer__band"><img src="img/groupfooter.png" alt="" /></div>
 </footer>
 
-
-  <script>
-  // Tu código existente…
+<script>
   const btn = document.querySelector('.user__btn');
   const menu = document.querySelector('.user__menu');
-
   btn.addEventListener('click', (e) => {
     e.stopPropagation();
     menu.classList.toggle('open');
     btn.setAttribute('aria-expanded', menu.classList.contains('open'));
   });
-
   document.addEventListener('click', () => menu.classList.remove('open'));
-
-  const menuLinks = document.querySelectorAll('.user__menu a');
-  menuLinks.forEach(link => {
+  document.querySelectorAll('.user__menu a').forEach(link => {
     link.addEventListener('click', (e) => {
-      menuLinks.forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.user__menu a').forEach(l => l.classList.remove('active'));
       e.target.classList.add('active');
     });
   });
-
-  /*  botón de 3 líneas dentro del menú para colapsar
-  const collapseBtn = document.querySelector('.menu-collapse-btn');
-  if (collapseBtn) {
-    collapseBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
-  } */
 </script>
-
-    
-
 
 </body>
 </html>
+
